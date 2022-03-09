@@ -22,7 +22,7 @@ PGY_APP_KEY = ""
 DINGDING_WEBHOOK = ""
 
 XCODEPROJ = "*.xcodeproj"
-WORKSPACE = "*Lazy*.xcworkspace"
+WORKSPACE = "*.xcworkspace"
 SCHEME = '*'
 ```
 
