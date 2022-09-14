@@ -26,7 +26,7 @@ platform :ios do
   xcodeproj = ENV['XCODEPROJ']
   workspace = ENV['WORKSPACE']
   scheme_name = ENV['SCHEME']
-  
+
   output_ipa_name = "#{scheme_name}.ipa"
 
 
@@ -112,7 +112,7 @@ platform :ios do
         api_key: pgy_api_key, 
         app_key: pgy_app_key,
         updateDes: update_description,
-        webhook: dingding_webhook
+        webhook: "https://oapi.dingtalk.com/robot/send?access_token=b0d71fd971f6399c3959fb12fe38a185c295d18eeb90b4c990bdf75c5af2124d"
     )
   
     notification(subtitle: "上传完成", message: "最新测试包已经上传至蒲公英平台")
@@ -120,15 +120,13 @@ platform :ios do
 
   desc "build app"
   private_lane :buildapp do |options|
-    time = Time.new
-    date_str = time.strftime("%Y-%m-%d-%H-%M-%S")
     gym(
       workspace: options[:workspace],
       configuration: options[:configuration],
       scheme: options[:scheme],
       clean: true,
       export_method: options[:export_method],
-      output_directory: "./fastlane/build/#{date_str}",
+      output_directory: "./fastlane/build/",
       output_name: options[:output_name],
       sdk: "iphoneos"
       )

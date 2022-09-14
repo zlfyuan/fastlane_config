@@ -1,10 +1,10 @@
 <!--
  * @Author: zluof
  * @Date: 2021-12-16 16:59:38
- * @LastEditTime: 2021-12-16 17:51:52
+ * @LastEditTime: 2022-09-14 12:07:18
  * @LastEditors: zluof
  * @Description: 
- * @FilePath: /fastlane_config/fastlane/README.md
+ * @FilePath: /fastlane_config/README.md
 -->
 
 # 使用
@@ -16,6 +16,13 @@ git clone https://github.com/zlfyuan/fastlane_config.git && mv fastlane_config f
 
 2、在该文件内建立 .env 文件 配置以下变量
 ```Swift
+
+APP_IDENTFIER=""
+APPLE_ID=""
+
+ITC_TEAM_ID=""
+TEAM_ID=""
+
 PGY_API_KEY = ""
 PGY_USER_KEY = ""
 PGY_APP_KEY = ""
