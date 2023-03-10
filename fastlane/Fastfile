@@ -45,10 +45,9 @@ platform :ios do
       export_method: "app-store",
       output_name: output_ipa_name
     )
-    upload_to_app_store
+    upload_to_app_store(force: true)
     notification(subtitle: "上传完成", message: "最新构建版本已经上传至AppStore connect")
-    version = get_version_number(xcodeproj: xcodeproj)
-    sh "sh /Users/zhongxiaoxi/sendUpdateNotifiy.sh #{scheme_name} #{version}"
+    
   end
 
 
